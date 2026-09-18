@@ -176,7 +176,9 @@
   .call .num { font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
   .call .sep { opacity: 0.45; }
   @media (max-width: 390px) {
+    .call { row-gap: 0.15rem; }
     .call .sep { display: none; }
+    .call .num { flex-basis: 100%; text-align: center; }
   }
   .call:hover {
     transform: translateY(-2px);
@@ -227,6 +229,16 @@
   a:focus-visible, .call:focus-visible {
     outline: 2px solid var(--gold);
     outline-offset: 3px;
+  }
+
+  /* === PHONE TUNING === */
+  @media (max-width: 480px) {
+    body { padding-block: clamp(2rem, 8vh, 3rem); }
+    main { gap: 0.85rem; }
+    .mark { width: clamp(120px, 34vw, 170px); border-radius: 11px; }
+    .eyebrow { letter-spacing: 0.18em; }
+    .lead { padding-inline: 0.25rem; }
+    .mini a { padding: 0.62rem 1.05rem; font-size: 0.9rem; }
   }
 
   @keyframes rise {
