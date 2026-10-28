@@ -311,20 +311,5 @@
   <p class="note">Работаем по предварительной записи. Ждём вас в уютной и спокойной атмосфере.</p>
 </main>
 
-<script>
-  // Google Ads: конверсии по кликам на кнопки связи (data-track → метка send_to)
-  const CONVERSION_LABELS = {
-    // 'call-phone': 'AW-18542015804/…',
-    // 'whatsapp':   'AW-18542015804/…',
-    // 'telegram':   'AW-18542015804/…'
-  };
-
-  document.addEventListener('click', (event) => {
-    const link = event.target.closest('[data-track]');
-    const sendTo = link && CONVERSION_LABELS[link.dataset.track];
-    if (!sendTo || typeof gtag !== 'function') return;
-    gtag('event', 'conversion', { send_to: sendTo });
-  });
-</script>
 </body>
 </html>
