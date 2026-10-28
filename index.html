@@ -114,13 +114,6 @@
     text-align: center;
   }
 
-  .mark {
-    width: clamp(150px, 30vw, 210px);
-    height: auto;
-    border-radius: 14px;
-    box-shadow: 0 18px 60px -20px rgba(0, 0, 0, 0.7);
-  }
-
   .eyebrow {
     margin: 0;
     font-size: var(--step-eyebrow);
@@ -245,7 +238,6 @@
   @media (max-width: 480px) {
     body { padding-block: clamp(2rem, 8vh, 3rem); }
     main { gap: 0.85rem; }
-    .mark { width: clamp(120px, 34vw, 170px); border-radius: 11px; }
     .eyebrow { letter-spacing: 0.18em; }
     .lead { padding-inline: 0.25rem; }
     .mini a { padding: 0.62rem 1.05rem; font-size: 0.9rem; }
@@ -265,7 +257,6 @@
       opacity: 0;
       animation: rise 0.9s var(--ease) forwards;
     }
-    .mark    { animation-delay: 0.05s; }
     .eyebrow { animation-delay: 0.2s; }
     h1       { animation-delay: 0.32s; }
     .lead    { animation-delay: 0.46s; }
@@ -282,8 +273,6 @@
 <div class="glow" aria-hidden="true"></div>
 
 <main lang="ru">
-  <img class="mark" src="femme-logo.png" alt="Логотип FEMME SPA" width="210" height="115" />
-
   <p class="eyebrow">Астана · массажный салон</p>
 
   <h1>Пространство, где тело <em>снова становится своим</em></h1>
